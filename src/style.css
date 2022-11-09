@@ -1,13 +1,13 @@
 /* style.css */
 
-.frame {}
+/* .frame {} */
 
 .container {
     display: flex;
     justify-content: space-around;
 }
 
-#pic-holder {}
+/* #pic-holder {} */
 
 img {
 
