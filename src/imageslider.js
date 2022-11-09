@@ -4,27 +4,29 @@
 
 buttonHandler = (event) => {
     console.log('in buttonHandler');
-    const imgElement = document.querySelector('img');
-    console.log(imgElement);
-    console.log(document.querySelector('.image').src);
-    let imgSrc = document.querySelector('.image').src;
+    const imgSrc = document.querySelector('.image').src;
+    console.log(imgSrc);
+    console.log(typeof imgSrc);
 
+    // find number from image file name
+    let imgNumber = imgSrc.match(/(?<=\/)[0-9]+(?=.(?=[a-zA-Z]))/);
+    console.log(imgNumber[0]);
+    let i = Number(imgNumber[0]);
 
-
-
-    let imgNumber = imgSrc.search(/[0 - 9]/);
-    console.log(imgNumber);
-    imgNumber = imgSrc.search(/[0 - 9]\+/);
-    console.log(imgNumber);
-
-    console.log(event);
-    console.log(event.target);
-
+    // returns arrow in button
     console.log(event.target.outerText);
 
-    // const clickedButton = 
-    // let i = str.match
-    // event.target.outerText == '>' ? imgElement.src = `../resources/${i + 1}.jpeg` : console.log('left arrow');
+    const clickedButton = event.target.outerText;
+    clickedButton == '>' ? j = i + 1 : j = i - 1;
+
+    console.log(j);
+    // const changedSrc = clickedButton == '>' ? imgSrc = `../resources/${i + 1}.jpeg`: imgSrc = `../resources/${i - 1}.jpeg`;
+    // console.log(changedSrc);
+    // imgSrc = `../resources/${j}.jpeg`;
+    document.querySelector('.image').src = `../resources/${j}.jpeg`;
+    console.log(imgSrc);
+
+    // event.target.outerText = clickedButton;
     // event.target.outerText == '>' ? console.log('right arrow' + imgElement) : console.log('left arrow');
 
     // matching regex for file number
