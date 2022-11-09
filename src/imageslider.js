@@ -27,6 +27,9 @@ buttonHandler = (event) => {
     // event.target.outerText == '>' ? imgElement.src = `../resources/${i + 1}.jpeg` : console.log('left arrow');
     // event.target.outerText == '>' ? console.log('right arrow' + imgElement) : console.log('left arrow');
 
+    // matching regex for file number
+    // (/(?<=\/)[0-9]+(?=.(?=[a-zA-Z]))/)
+
 }
 
 buttonInit = () => {
@@ -40,3 +43,5 @@ window.addEventListener('DOMContentLoaded', (e) => {
     console.log('DOM loaded and parsed');
     buttonInit();
 });
+
+
