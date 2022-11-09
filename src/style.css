@@ -1,0 +1,16 @@
+/* style.css */
+
+.frame {}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#pic-holder {}
+
+img {
+
+    object-fit: scale-down;
+    width: 400px;
+}
